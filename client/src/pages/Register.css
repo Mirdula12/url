@@ -1,0 +1,108 @@
+/* Full page center */
+.register-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  /* 🔥 SAME DASHBOARD STYLE BACKGROUND */
+  background: radial-gradient(circle at top,
+    #1e3a8a,
+    #0f172a,
+    #020617
+  );
+
+  color: white;
+}.register-page {
+  min-height: 100vh;
+ background: radial-gradient(circle at top,
+    #1e3a8a,
+    #0f172a,
+    #020617
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Register box */
+.register-box {
+  width: 380px;
+  padding: 30px;
+  background: #e1e3e7;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  text-align: center;
+  color: white;
+}
+
+/* Inputs */
+.register-box input {
+  width: 100%;
+  padding: 13px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #cfd3dc;
+  color: rgb(32, 30, 30);
+}
+
+/* Button */
+.register-box button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: #387593;
+  color: rgb(47, 43, 43);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.register-box button:hover {
+  background: #4adbe2;
+}
+
+/* Error */
+.error-text {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Top-left Login button */
+.login-btn {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  padding: 10px 15px;
+  border: none;
+  background: #28a745;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #2563eb;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #2563eb, #0ea5e9);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

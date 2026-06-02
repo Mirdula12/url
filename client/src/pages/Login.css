@@ -1,0 +1,75 @@
+/* Full page center */
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+   background: radial-gradient(circle at top,
+    #1e3a8a,
+    #0f172a,
+    #020617
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login box */
+.login-box {
+  width: 380px;
+  border-radius: 30px;
+  padding: 30px;
+  border: 1px solid #334155;
+  background: #cfd3dc;
+  color: rgb(32, 30, 30);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+/* Inputs */
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Button */
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background: #0056b3;
+}
+
+/* Error text */
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Register button top-right */
+.register-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  border: none;
+  background: #28a745;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background: #1e7e34;
+}
