@@ -24,6 +24,20 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/url", urlRoutes);
 
+// 👇 ADD HERE (IMPORTANT)
+app.get("/:shortId", async (req, res) => {
+  const url = await Url.findOne({ shortId: req.params.shortId });
+
+  if (url) {
+    url.clicks++;
+    await url.save();
+
+    return res.redirect(url.originalUrl);
+  }
+
+  res.status(404).send("Not found");
+});
+
 // Home route
 app.get("/", (req, res) => {
   res.send("URL Shortener API Running 🚀");

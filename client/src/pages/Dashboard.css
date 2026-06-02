@@ -1,11 +1,12 @@
+
 /* RESET */
 * {
-  margin: 20;
-  padding: 20;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* BACKGROUND (premium gradient dark) */
+/* BACKGROUND */
 body {
   font-family: "Segoe UI", sans-serif;
   min-height: 100vh;
@@ -26,42 +27,64 @@ body {
   padding: 40px;
 }
 
-/* TITLE (GLOW EFFECT 🔥) */
+/* TITLE */
 .dashboard-title {
   text-align: center;
   font-size: 48px;
   font-weight: bold;
-
   color: #38bdf8;
-
- 
-
   margin-bottom: 30px;
 }
 
-/* DASHBOARD HEADER */
-.dashboard-header {
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 20px;
-
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-}
-
-/* LOGOUT BUTTON */
-.logout-btn {
+/* =========================
+   TOP RIGHT AREA
+========================= */
+.top-right {
   position: fixed;
   top: 20px;
   right: 20px;
 
-  background: #1adc6e;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  z-index: 1000;
+}
+
+/* PROFILE CIRCLE */
+.profile-circle {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+  background: #d53118;
   color: white;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  cursor: pointer;
+
+  box-shadow: 0 0 10px rgba(34,197,94,0.5);
+  transition: 0.3s;
+}
+
+.profile-circle:hover {
+  transform: scale(1.1);
+  background: #16a34a;
+}
+
+/* LOGOUT */
+.logout-btn {
+  padding: 8px 14px;
+
   border: none;
-  padding: 10px 18px;
-  border-radius: 10px;
+  border-radius: 8px;
+
+  background: #ef4444;
+  color: white;
 
   font-weight: bold;
   cursor: pointer;
@@ -74,7 +97,9 @@ body {
   transform: scale(1.05);
 }
 
-/* URL INPUT FORM */
+/* =========================
+   FORM
+========================= */
 .url-form {
   display: flex;
   justify-content: center;
@@ -82,7 +107,6 @@ body {
   margin-bottom: 30px;
 }
 
-/* INPUT (GLASS STYLE) */
 .url-input {
   width: 500px;
   padding: 15px;
@@ -101,7 +125,7 @@ body {
   box-shadow: 0 0 10px #38bdf8;
 }
 
-/* BUTTON (NEON STYLE 🔥) */
+/* BUTTON */
 .shorten-btn {
   padding: 15px 22px;
 
@@ -122,30 +146,80 @@ body {
   box-shadow: 0 0 20px #38bdf8;
 }
 
-/* SHORT URL BOX */
+/* =========================
+   SHORT URL BOX (FIXED)
+========================= */
 .short-url-box {
   width: 60%;
   margin: 20px auto;
 
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 
   padding: 20px;
   border-radius: 15px;
 
   text-align: center;
+
+  color: white;
+
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+
+  transition: 0.3s;
 }
 
-/* URL TITLE */
+.short-url-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(56,189,248,0.25);
+}
+
+/* LABELS */
+.short-url-box h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+/* ORIGINAL URL */
+.short-url-box .original {
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* SHORT LABEL */
+.short-url-box .short-label {
+  color: #60a5fa;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* 🔴 SHORT LINK */
+.short-url-box a {
+  display: inline-block;
+  margin-top: 8px;
+
+  color: #ff3333;   /* RED */
+  font-weight: bold;
+font-size: 18px;
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.short-url-box a:hover {
+  color: #dc2626;
+  text-decoration: underline;
+}
+
+/* =========================
+   URL LIST
+========================= */
 .myurls-title {
   text-align: center;
   font-size: 32px;
-
   color: #60a5fa;
-
   margin: 30px 0;
-
-  text-shadow: 0 0 10px rgba(96,165,250,0.5);
 }
 
 /* URL CARD */
@@ -154,7 +228,6 @@ body {
   max-width: 90%;
 
   margin: 20px auto;
-
   padding: 25px;
 
   background: rgba(255,255,255,0.06);
@@ -163,6 +236,17 @@ body {
   border-radius: 16px;
 
   transition: 0.3s;
+}
+.url-card a {
+  color: #ff5722 !important;   /* Orange */
+}
+
+.url-card a:visited {
+  color: #ff5722 !important;
+}
+
+.url-card a:hover {
+  color: #ff3300 !important;
 }
 
 .url-card:hover {
@@ -178,41 +262,37 @@ body {
   margin-top: 15px;
 }
 
-/* COPY BUTTON */
+/* COPY */
 .copy-btn {
   background: #22c55e;
   border: none;
-
   padding: 10px 18px;
   border-radius: 8px;
-
   color: white;
   cursor: pointer;
 }
 
 .copy-btn:hover {
   background: #16a34a;
-  box-shadow: 0 0 10px #22c55e;
 }
 
-/* DELETE BUTTON */
+/* DELETE */
 .delete-btn {
   background: #ef4444;
   border: none;
-
   padding: 10px 18px;
   border-radius: 8px;
-
   color: white;
   cursor: pointer;
 }
 
 .delete-btn:hover {
   background: #dc2626;
-  box-shadow: 0 0 10px #ef4444;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 768px) {
   .dashboard-title {
     font-size: 30px;
@@ -225,4 +305,76 @@ body {
   .url-input {
     width: 100%;
   }
+
+  .short-url-box {
+    width: 90%;
+  }
 }
+
+
+.search-input {
+  width: 320px;
+  max-width: 90%;
+
+  padding: 12px 16px;
+  margin: 10px auto 25px;
+
+  display: block;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+
+  outline: none;
+
+  font-size: 14px;
+
+  transition: 0.3s;
+
+  backdrop-filter: blur(10px);
+}
+
+/* focus effect */
+.search-input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+  transform: scale(1.02);
+}
+
+/* placeholder color */
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* hover effect */
+.search-input:hover {
+  border-color: rgba(56, 189, 248, 0.5);
+}
+.search-input {
+  padding-left: 40px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/622/622669.png");
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: 12px center;
+}
+
+.copy-btn {
+  background: #22c55e;
+  border: none;
+
+  padding: 10px 18px;
+  border-radius: 8px;
+
+  color: white;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.copy-btn:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+

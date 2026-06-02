@@ -1,0 +1,198 @@
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BACKGROUND */
+.profile-container {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(circle at top,
+    #1e3a8a,
+    #0f172a,
+    #020617
+  );
+
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+}
+
+/* =========================
+   PROFILE CARD (MAIN BOX)
+========================= */
+.profile-card {
+  width: 360px;
+  padding: 30px;
+
+  text-align: center;
+
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+
+  border-radius: 18px;
+
+  backdrop-filter: blur(12px);
+
+  transition: all 0.4s ease;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+
+/* ✨ HOVER EFFECT */
+.profile-card:hover {
+  transform: translateY(-12px) scale(1.03);
+
+  border: 1px solid rgba(56,189,248,0.5);
+
+  box-shadow:
+    0 0 25px rgba(56,189,248,0.3),
+    0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* =========================
+   BIG CIRCLE AVATAR
+========================= */
+.big-circle {
+  width: 95px;
+  height: 95px;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 36px;
+  font-weight: bold;
+
+  color: white;
+
+  box-shadow: 0 0 20px rgba(34,197,94,0.6);
+
+  transition: 0.3s;
+}
+
+.big-circle:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   USER NAME
+========================= */
+.profile-card h2 {
+  margin-top: 10px;
+  font-size: 22px;
+  color: #ffffff;
+}
+
+/* EMAIL */
+.profile-card p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* =========================
+   INFO BOX
+========================= */
+.info-box {
+  margin-top: 20px;
+
+  text-align: left;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  line-height: 1.8;
+
+  font-size: 14px;
+
+  transition: 0.3s;
+}
+
+/* INFO BOX HOVER */
+.info-box:hover {
+  transform: scale(1.02);
+  border: 1px solid rgba(56,189,248,0.4);
+  box-shadow: 0 0 15px rgba(56,189,248,0.2);
+}
+
+/* =========================
+   TEXT COLORS INSIDE BOX
+========================= */
+.info-box p {
+  color: rgba(255,255,255,0.85);
+}
+
+/* =========================
+   LOADING TEXT
+========================= */
+.loading {
+  color: #38bdf8;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 500px) {
+  .profile-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .big-circle {
+    width: 80px;
+    height: 80px;
+    font-size: 30px;
+  }
+}
+
+
+.back-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  padding: 8px 14px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: rgba(255,255,255,0.1);
+  color: white;
+
+  cursor: pointer;
+  font-weight: bold;
+
+  transition: 0.3s;
+
+  backdrop-filter: blur(10px);
+}
+
+.back-btn:hover {
+  background: #38bdf8;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* IMPORTANT */
+.profile-card {
+  position: relative;
+}
