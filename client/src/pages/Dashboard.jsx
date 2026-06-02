@@ -5,7 +5,6 @@ import "./Dashboard.css";
 import { toast } from "react-toastify";
 import { QRCodeSVG } from "react-qr-code";
 
-
 function Dashboard() {
   const [originalUrl, setOriginalUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
